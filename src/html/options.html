@@ -1,0 +1,184 @@
+<!--
+    Kutsan Kaplan <me@kutsankaplan.com>
+    http://kutsankaplan.com
+    22.05.2016
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Weather Assistent</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"
+          media="screen,projection"/>
+</head>
+
+<!--suppress CssUnusedSymbol -->
+<style type="text/css">
+
+    /*noinspection CssUnknownProperty,CssNoGenericFontName*/
+    html, body
+    {
+        font-size: 14px;
+        width: 400px;
+        height: 520px;
+        color: #212121;
+        font-family: Roboto;
+        background-color: #F1F1F1;
+        margin: 0 auto;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #material-band
+    {
+        z-index: 0;
+        position: fixed;
+        width: 100%;
+        height: 25%;
+        top: 0;
+        background-color: #607D8B;
+    }
+
+    #logo
+    {
+        position: relative;
+        top: 1px;
+    }
+
+    .container
+    {
+        margin-top: 30px;
+    }
+
+    /* Top title */
+    #title-row, #title-row
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #title-row, #title-row > span
+    {
+        font-size: 30px;
+    }
+
+    /* Buttons */
+    /* Save button */
+    .btn
+    {
+        background-color: #0288D1;
+    }
+
+    /* Save button */
+    .btn:hover
+    {
+        background-color: #03A9F4;
+    }
+
+    /* Reset button */
+    #reset-button
+    {
+        color: #212121;
+    }
+
+    #reset-button:hover
+    {
+        color: #9E9E9E;
+    }
+
+    /* Email button margin */
+    #send-email-button
+    {
+        margin-right: 10px;
+    }
+
+    /* Reset button margin right */
+    #reset-button
+    {
+        margin-right: 0;
+    }
+
+    /* Range inputs */
+    input[type=range] + .thumb
+    {
+        background-color: #0288D1;
+    }
+
+    input[type=range]::-webkit-slider-thumb
+    {
+        background-color: #0288D1;
+    }
+
+    /* font-family box colors */
+    .input-field input[type=text].valid, .input-field input[type=number].valid
+    {
+        border-bottom: 1px solid #9E9E9E;
+        box-shadow: 0 0 0 0 #9E9E9E;
+    }
+
+    .input-field input[type=text]:focus, .input-field input[type=number]:focus
+    {
+        border-bottom: 1px solid #9E9E9E;
+        box-shadow: 0 1px 0 0 #9E9E9E;
+    }
+
+    .input-field input[type=text]:focus + label, .input-field input[type=number]:focus + label
+    {
+        color: #9E9E9E;
+    }
+
+</style>
+
+<body>
+<script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+
+<div id="material-band"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+
+            <div class="card">
+                <div class="card-content">
+                    <div id="title-row" class="row center-align">
+                        <!--suppress CheckImageSize -->
+                        <img id="logo" src="../icons/48.png" width="24" height="24" class="tooltipped"
+                             data-position="top" data-delay="20"
+                             data-tooltip="Never stop learning.">
+                        <span class="card-title black-text" id="options-title">The Weather Assistent</span>
+                    </div>
+
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="op-font-family" type="text" autocomplete="off"
+                                       tabindex="-1" value="London"
+                                       class="validate">
+                                <label for="op-font-family" class="active">Your Location:</label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="card-action right-align">
+                    <a class="waves-effect btn-flat" id="reset-button">Reset</a>
+                    <a class="waves-effect btn" id="save-button">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/readwrite.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Weather Assistent</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+    <link rel="stylesheet" href="../css/style.css"> </head>
+
+<body>
+    <!--<script>
+  function handleOverlay(){
+    console.log('aaa');
+    $('.overlay').remove();
+  }
+</script> -->
+    <div class="wrapper">
+        <header>
+            <h1> The Weather Assistent </h1>
+            <nav class="actions"> <span class="action" id="editCards"><i class="fa" id="edit"></i></span> <span class="action" id="addCard"><i class="fa fa-plus"></i></span> <span class="action" id="removeCard"><i class="fa fa-minus"></i></span> <span class="action" id="changeTemp">C</span> </nav>
+        </header>
+        <div class="cards">
+            <div class='card first-card card' id="0"> <i class="icon wi wi-day-sunny"></i>
+                <h3 class='temp'>0º</h3>
+                <p class="city">Loading location...</p>
+            </div>
+        </div>
+        <footer>
+            <hr/>
+            <p>Made with <i class="fa fa-heart heart"></i></br><a href="http://burli.biz/wordpress/">Matteo Kofler</a> & <a href="https://github.com/Anemolo">Daniel Velasquez</a></p>
+        </footer>
+        <div>
+            <script src='../js/jquery-3.4.min.js'></script>
+            <script src='../js/fetch.js'></script>
+            <script src='../js/fetch-jsonp.min.js'></script>
+            <script src="../js/index.js"></script>
+</body>
+
+</html>
